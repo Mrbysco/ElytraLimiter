@@ -16,7 +16,7 @@ public class ElytraConfig {
 
 			restrictedDimensions = builder
 					.comment("A list of dimension identifiers in which elytra flight is restricted.")
-					.defineListAllowEmpty("restrictedDimensions", () -> List.of(""), o -> (o instanceof String));
+					.defineListAllowEmpty("restrictedDimensions", () -> List.of(""), String::new, o -> (o instanceof String));
 
 			showMessage = builder
 					.comment("Whether to show a message when elytra flight is restricted.")
