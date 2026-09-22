@@ -1,3 +1,6 @@
 {
-  "elytralimiter.restriction_message": "§cElytra flight is restricted in this dimension."
+  "elytralimiter.restriction_message": "§cElytra flight is restricted in this dimension.",
+  "elytralimiter.configuration.general": "General",
+  "elytralimiter.configuration.restrictedDimensions": "Restricted Dimensions",
+  "elytralimiter.configuration.showMessage": "Show Message"
 }

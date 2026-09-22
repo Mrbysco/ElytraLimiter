@@ -1,5 +1,5 @@
 modLoader="javafml"
-loaderVersion="[47,)"
+loaderVersion="[4,)"
 issueTrackerURL="https://github.com/Mrbysco/ElytraLimiter/issues"
 license="MIT"
 
@@ -14,13 +14,15 @@ Allows limiting elytra usage to specific dimensions
 '''
 [[dependencies.elytralimiter]]
 modId="minecraft"
-mandatory=true
-versionRange="[1.20.1,1.21)"
+type="required"
+versionRange="[1.21,1.22)"
 ordering="NONE"
 side="BOTH"
 [[dependencies.elytralimiter]]
-modId="forge"
-mandatory=true
-versionRange="[47.1.0,)"
+modId="neoforge"
+type="required"
+versionRange="[21.1.1,)"
 ordering="NONE"
 side="BOTH"
+[[mixins]]
+config="elytralimiter.mixins.json"

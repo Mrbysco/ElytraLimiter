@@ -1,16 +1,16 @@
 package com.mrbysco.elytralimiter.config;
 
-import net.minecraftforge.common.ForgeConfigSpec;
+import net.neoforged.neoforge.common.ModConfigSpec;
 import org.apache.commons.lang3.tuple.Pair;
 
 import java.util.List;
 
 public class ElytraConfig {
 	public static class Common {
-		public final ForgeConfigSpec.ConfigValue<List<? extends String>> restrictedDimensions;
-		public final ForgeConfigSpec.BooleanValue showMessage;
+		public final ModConfigSpec.ConfigValue<List<? extends String>> restrictedDimensions;
+		public final ModConfigSpec.BooleanValue showMessage;
 
-		Common(ForgeConfigSpec.Builder builder) {
+		Common(ModConfigSpec.Builder builder) {
 			builder.comment("General settings")
 					.push("general");
 
@@ -26,11 +26,11 @@ public class ElytraConfig {
 		}
 	}
 
-	public static final ForgeConfigSpec commonSpec;
+	public static final ModConfigSpec commonSpec;
 	public static final Common COMMON;
 
 	static {
-		final Pair<Common, ForgeConfigSpec> specPair = new ForgeConfigSpec.Builder().configure(Common::new);
+		final Pair<Common, ModConfigSpec> specPair = new ModConfigSpec.Builder().configure(Common::new);
 		commonSpec = specPair.getRight();
 		COMMON = specPair.getLeft();
 	}
